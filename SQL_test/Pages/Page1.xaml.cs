@@ -24,5 +24,10 @@ namespace SQL_test
         {
             InitializeComponent();
         }
+        
+        public Page1(TodoItem todoItem)
+        {
+        
+        }
     }
 }

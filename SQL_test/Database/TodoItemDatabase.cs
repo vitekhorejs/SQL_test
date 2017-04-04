@@ -20,10 +20,10 @@ namespace SQL_test
             return database.Table<TodoItem>().ToListAsync();
         }
 
-        /*public Task<TodoItem> GetItemAsync(int id)
+        public Task<TodoItem> GetItemAsync(string ISBN)
         {
-            return database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
-        }*/
+            return database.Table<TodoItem>().Where(i => i.ISBN == ISBN).FirstOrDefaultAsync();
+        }
 
         /*public Task<List<TodoItem>> GetItemAsync(string value) ////////////////////////////////////////////////////////////////
         {

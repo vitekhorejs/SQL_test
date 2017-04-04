@@ -42,6 +42,24 @@ namespace SQL_test
             }
         }
 
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void listViewItem_MouseDoubleClick(object sender, RoutedEventArgs e)
+        {
+            ListViewItem item = sender as ListViewItem;
+            object obj = item.Content;
+            Page1 Page1 = new Page1();
+            this.NavigationService.Navigate(new Page1(obj as TodoItem));
+        }
+
         /*
          
         public void listViewItem_MouseDoubleClick(object sender, RoutedEventArgs e)

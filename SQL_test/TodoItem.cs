@@ -11,35 +11,20 @@ namespace SQL_test
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        
-        
-        
-        
-        
-        /*public string Name { get; set; }
-        public string SurName { get; set; }
-        public DateTime BirthDate { get; set; }
-        public string RodneCislo { get; set; }
-        public string Gender { get; set; }
-        public string Added { get; set; }
-        public string Edited { get; set; }*/
+        public string Name { get; set; }
+        public string ISBN { get; set; }
+        public string Author { get; set; }
+        public int Pages { get; set; }
 
-
-        /*public int Age
+        /*public string ISBN
         {
-            get { return _age(); }
+            get { return "978" + ISBN; }
+            set { ISBN = value;  }
+        }*/
+
+        public override string ToString()
+        {
+            return  Name + " - " + Author + "  " + ISBN;
         }
-        public int _age()
-        {
-            DateTime now = DateTime.Today;
-            int age = now.Year - BirthDate.Year;
-            if (now < BirthDate.AddYears(age)) age--;
-            return age;
-        }*/
-
-        /*public override string ToString()
-        {
-            return Name + " " + SurName + "  " + RodneCislo + " " + Age;
-        }*/
     }
 }

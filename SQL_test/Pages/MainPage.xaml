@@ -6,17 +6,35 @@
       xmlns:local="clr-namespace:SQL_test"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="MainPage">
-    <!--       Title="MainPage" Height="500" Width="900" MaxHeight="500" MaxWidth="900" MinHeight="500" MinWidth="900" Background="#FFF7C77F">
--->
+ Title="MainPage" Height="500" Width="900" MaxHeight="500" MaxWidth="900" MinHeight="500" MinWidth="900" Background="white">
 
     <Grid>
         <ListView x:Name="listwiew" Margin="10,0,0,35" Height="395" Width="550" HorizontalAlignment="Left" VerticalAlignment="Bottom"  Padding="10,5" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <EventSetter Event="MouseDoubleClick" Handler="listViewItem_MouseDoubleClick" />
+                    
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
+        <Label x:Name="label" Content="Evidence Knih" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+
+        <StackPanel HorizontalAlignment="Right" Height="420" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="300" Background="White" >
+            <Label x:Name="label1" Content="Název knihy:" HorizontalAlignment="Center" Margin="0,10,0,0" FontWeight="Bold"/>
+            <TextBox x:Name="Name" Height="23" TextWrapping="Wrap" Margin="30,0"/>
+            <Label x:Name="label3" Content="Autor:" HorizontalAlignment="Center" FontWeight="Bold" Margin="0,10,0,0"/>
+            <TextBox x:Name="Author" Height="23" TextWrapping="Wrap" Margin="30,0"/>
+            <Label x:Name="label5" Content="ISBN:" HorizontalAlignment="Center" FontWeight="Bold" Margin="0,10,-3,0"/>
+            <Label x:Name="ISBN_predcisli" Height="23" Content="978" Width="35" HorizontalAlignment="Left" Margin="30,0,0,0" HorizontalContentAlignment="Right"/>
+            <!--<Label x:Name="label2" Content="/" Margin="81,-25,0,0" HorizontalAlignment="Center"/>-->
+            <TextBox x:Name="ISBN" Height="23" TextWrapping="Wrap" Width="200" HorizontalAlignment="Right" Margin="0,-23,30,0"/>
+
+      
+            <Button x:Name="button" Content="Přidat" Margin="30,30,30,0" VerticalAlignment="Center" Height="40" Click="button_Click"/>
+        </StackPanel>
+
+        <TextBox x:Name="SearchText" HorizontalAlignment="Left" Height="25" Margin="10,0,0,10" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="441"/>
+        <Button x:Name="SearchButton" Content="Vyhledat" HorizontalAlignment="Left" Margin="451,0,0,10" VerticalAlignment="Bottom" Width="109" Height="25" Click="SearchButton_Click"/>
+
     </Grid>
 </Page>
