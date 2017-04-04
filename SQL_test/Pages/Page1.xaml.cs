@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace SQL_test
 {
     /// <summary>
-    /// Interakční logika pro MainWindow.xaml
+    /// Interakční logika pro Page1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page1 : Page
     {
-        public MainWindow()
+        public Page1()
         {
             InitializeComponent();
-            MainPage MainPage = new MainPage();
-            frame.NavigationService.Navigate(MainPage);
         }
     }
 }
